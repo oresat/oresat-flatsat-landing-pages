@@ -19,11 +19,30 @@
                 margin-top: 4em;
             }
 
-            .services > a {
-                font-size: 6em;
-                padding: 0.5em;
+            .services > span {
+                display: inline-block;
+                padding: 0 4em;
                 color: black;
+                transition: 0.4s;
+            }
+
+            .services > span:hover {
+                color: #245b55;
+            }
+
+            .services > span > a {
+                padding: 0;
+                margin: 0;
+                font-size: 6em;
+                color:inherit;
                 text-decoration: none;
+            }
+
+            .services > span > p {
+                padding: 0;
+                margin: 0;
+                font-size: 1.1em;
+                font-weight: bold;
             }
 
             footer {
@@ -46,8 +65,15 @@
             <h6>This is the landing-page and general service directory for the <abbr title="Monitoring Diagnostic Controller">MDC</abbr>.</h6>
 
             <div class="services">
-                <a href="/command" class="bi bi-speedometer" alt="Grafana Dashboard"></a>
-                <a href="/dashboard" class="bi bi-terminal-fill" alt="Yamcs Command Center"></a>
+                <span>
+                    <a href="/command" class="bi bi-terminal-fill" alt="Yamcs Command Center"></a>
+                    <p>Yamcs</p>
+                </span>
+
+                <span>
+                    <a href="/dashboard" class="bi bi-speedometer" alt="Grafana Dashboard"></a>
+                    <p>Grafana</p>
+                </span>
             </div>
         </div>
 
